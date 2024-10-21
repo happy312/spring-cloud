@@ -1,0 +1,2 @@
+windows系统启动nacos命令如下：
+startup.cmd -m standalone
