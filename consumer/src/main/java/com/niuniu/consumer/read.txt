@@ -1,2 +1,8 @@
 windows系统启动nacos命令如下：
 startup.cmd -m standalone
+
+nacos目录：E:\java-study\nacos\nacos\bin
+
+redis目录：E:\redis
+redis启动命令：redis-server redis.windows.conf
+
