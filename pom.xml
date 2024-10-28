@@ -34,5 +34,9 @@
         <module>dependencies</module>
         <module>provider</module>
         <module>consumer</module>
+
+        <module>user</module>
+        <module>order</module>
+        <module>product</module>
     </modules>
 </project>
