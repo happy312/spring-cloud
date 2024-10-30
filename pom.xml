@@ -38,5 +38,7 @@
         <module>user</module>
         <module>order</module>
         <module>product</module>
+        <!-- 网关 -->
+        <module>gateway</module>
     </modules>
 </project>

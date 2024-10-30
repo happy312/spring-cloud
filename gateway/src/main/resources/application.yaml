@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order-service
+    name: user-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/springcloud
@@ -16,12 +16,6 @@ spring:
       discovery:
         server-addr: localhost:8848
 server:
-  port: 8084
+  port: 8083
   servlet:
-    context-path: /order-service
-logging:
-  root:
-    level: debug
-mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+    context-path: /user-service
