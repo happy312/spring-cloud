@@ -1,21 +1,38 @@
 spring:
   application:
-    name: user-service
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springcloud
-    username: root
-    password: 123456
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    password:
-    database: 0
+    name: gateway-service
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
+    gateway:
+      routes:
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order-service/**
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/product-service/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user-service/**
 server:
-  port: 8083
+  port: 8080
   servlet:
-    context-path: /user-service
+    context-path: /gateway-service
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /hi
+      - /hello
+
+
+

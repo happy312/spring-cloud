@@ -19,3 +19,6 @@ server:
   port: 8083
   servlet:
     context-path: /user-service
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
